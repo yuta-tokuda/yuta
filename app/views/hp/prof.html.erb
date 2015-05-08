@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>略歴</title>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+ <style type="text/css">
+ <!--
+ body
+        {
+          background-color: #cae4ff;
+          color: #000000;
+         margin:0px;
+         padding:0px;
+        }
+#top
+        {
+         
+         width:100%;
+         height:100px;
+         }
+#l1     {
+         width:30%;
+         float:left;
+        }
+#l2     {
+         width:30%;
+         float:left;
+        }
+#l3     {
+         width:30%;
+         float:left;
+  
+p.s      {
+		 font-size:120%;
+        }     
+div.e     {
+		 width:20%;
+         float:left;
+		}     
+div.n   {
+		 width: 10%;
+		 float: left;
+        }  
+div.c     {
+		 width: 70%;
+         float:left;
+		}
+ -->
+ </style>
+ </head>
+<body >
+
+<div id="top">
+<center>
+<h1>---略歴1---</h1>
+<h3><span style="border-bottom:1px dotted black">徳田 裕太/Tokuda Yu-ta</span></h3></center></div>
+<table>
+<tbody>
+<div id="l1">
+
+<center><p class="s"><h2>～小学校</h2></p>
+	<% @histories1.each do |history| %>
+		<div class="e">
+			<%= history.age %>
+		</div><br>
+		<div class="c">
+			<%= history.cont.gsub("\n", "<br>").html_safe %>
+		
+		</div><br>
+		<div style="clear: both;"></div>
+
+	<% end %>
+	 <p><%= link_to image_tag('ry-2.gif', {  :border => '0', :alt => 'prof2',}),prof2_hp_index_url %></p>
+	<%= link_to image_tag('main.gif', {  :border => '0', :alt => 'index',}), hp_index_url %>
+
+</div>
+<div id="l2">
+<center><p class="s"><h2>中学</h2></p>
+<% @histories2.each do |history| %>
+<div class="e">
+	<%= history.age.gsub("\n", "<br>").html_safe %>
+</div><br>
+<div class="c">
+	<%= history.cont.gsub("\n", "<br>").html_safe %>
+</div><br>
+	<div style="clear: both;"></div>
+	<% end %>
+	</center>
+</div>
+<div id="l3">
+<center><p class="s"><h2>高校</h2></p>
+
+<% @histories3.each do |history| %>
+<div class="e">
+	<%= history.age %>
+</div><br>
+<div class="c">
+	<%= history.cont.gsub("\n", "<br>").html_safe %>
+</div><br></center>
+</div>
+<div style="clear: both;"></div>
+<% end %>
+
+</tbody>
+</table>
+
+
+
+</body>
+</html>

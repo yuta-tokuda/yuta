@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  age: MyString
+  cont: MyString
+  mode: 1
+
+two:
+  age: MyString
+  cont: MyString
+  mode: 1
