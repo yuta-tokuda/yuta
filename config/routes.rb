@@ -48,7 +48,7 @@ Rails.application.routes.draw do
       get :prof2, on: :collection
   end
 
-  
+  match '/help', to: 'static_pages#help', via: 'get'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
